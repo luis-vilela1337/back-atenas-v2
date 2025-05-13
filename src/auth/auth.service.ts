@@ -10,7 +10,8 @@ export class AuthService {
 
   constructor(
     private readonly jwt: JwtService,
-    @InjectRepository(UsersRepository) private readonly usersRepo: UsersRepository,
+    @InjectRepository(UsersRepository)
+    private readonly usersRepo: UsersRepository,
   ) {}
 
   async validateUser(email: string, passwordPlain: string) {

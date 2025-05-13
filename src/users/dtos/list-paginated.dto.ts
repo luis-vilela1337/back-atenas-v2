@@ -1,23 +1,34 @@
-import { IsInt, IsOptional, IsPositive, IsString, IsUUID } from 'class-validator';
+import {
+  IsInt,
+  IsOptional,
+  IsPositive,
+  IsString,
+  IsUUID,
+} from 'class-validator';
 import { Transform } from 'class-transformer';
 
 export class ListUsersPaginatedDto {
   @IsOptional()
   @Transform(({ value }) => parseInt(value, 10))
-  @IsInt() @IsPositive()
+  @IsInt()
+  @IsPositive()
   page = 1;
 
   @IsOptional()
   @Transform(({ value }) => parseInt(value, 10))
-  @IsInt() @IsPositive()
+  @IsInt()
+  @IsPositive()
   limit = 10;
 
-  @IsOptional() @IsString()
+  @IsOptional()
+  @IsString()
   search?: string;
 
-  @IsOptional() @IsUUID()
+  @IsOptional()
+  @IsUUID()
   institutionId?: string;
 
-  @IsOptional() @IsString()
+  @IsOptional()
+  @IsString()
   role?: 'admin' | 'client';
 }

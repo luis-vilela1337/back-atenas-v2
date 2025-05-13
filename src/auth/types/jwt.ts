@@ -8,4 +8,3 @@ export interface JwtPayload {
   /** Expiration (unix epoch seconds) – incluído automaticamente pelo JwtService */
   exp?: number;
 }
-

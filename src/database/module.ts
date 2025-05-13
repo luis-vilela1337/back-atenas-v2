@@ -3,7 +3,6 @@ import { MikroOrmModule } from '@mikro-orm/nestjs';
 import { Institution } from '@institution/repositories/entities/institution.entity';
 import { User } from '@users/repositories';
 
-
 @Global()
 @Module({
   imports: [

@@ -14,7 +14,7 @@ export class User {
   id: string = randomUUID();
 
   @Property({ length: 255 })
-  name!: string; 
+  name!: string;
   @Property({ unique: true, length: 50 })
   identifier!: string;
   @Property({ unique: true, length: 255 })
@@ -22,7 +22,7 @@ export class User {
   @Property({ length: 20 })
   phone!: string;
   @Property({ nullable: true, type: 'text' })
-  observations?: string; 
+  observations?: string;
   @Property() passwordHash!: string;
 
   @Property({ columnType: 'varchar(20)' })
